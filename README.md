@@ -1,7 +1,7 @@
 # ![](res/karat.webp) karat
 
 <p align=center>
-In-game spam filter for Dofus. Named after the Meridia of tranquility. Windows only.
+In-game spam filter for Dofus. Named after the Meridia of tranquility.
 </p>
 
 <p align=center>
