@@ -6,8 +6,8 @@ In-game spam filter for Dofus. Named after the Meridia of tranquility.
 
 ## Getting started
 
-1. Launch your Dofus clients
-2. Load your characters 
+1. Launch your Dofus client(s)
+2. Load your character(s)
 3. Launch karat.exe
 
 ## UI breakdown
