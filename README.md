@@ -1,12 +1,10 @@
 # ![](res/karat.webp) karat
 
-<p align=center>
-In-game spam filter for Dofus. Named after the Meridia of tranquility.
-</p>
+<p align=center>In-game spam filter for Dofus. Named after the Meridia of tranquility.</p>
 
-<p align=center>
-Windows only.
-</p>
+<p align=center>Windows only.</p>
+
+<p align=center><a href="https://donate.stripe.com/test_14k02tgZo1xG7WEcMM"><img src="https://github.com/Airtz/karat/blob/main/res/donate.png" width=110 height=132/></a></p>
 
 ## Getting started
 
@@ -17,7 +15,7 @@ Windows only.
 
 ## UI breakdown
 
-<p align=center><img src="https://github.com/Airtz/karat/blob/main/res/collapsed_ui.png" /></p>
+<p align=center><img src="https://github.com/Airtz/karat/blob/main/res/collapsed_ui.png"/></p>
 
 1. Load a classifier
 2. Save the current classifier
@@ -28,7 +26,7 @@ Windows only.
     * `Filter + Training`: log messages for manual training, filter spams and automatic training
 6. Expand or collapse the UI
 
-<p align=center><img src="https://github.com/Airtz/karat/blob/main/res/expanded_ui.png" /></p>
+<p align=center><img src="https://github.com/Airtz/karat/blob/main/res/expanded_ui.png"/></p>
 
 1. Spam list
     * `Channel`: channel in which the message was sent
