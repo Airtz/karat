@@ -8,10 +8,10 @@
 
 ## Getting started
 
-1. [Download](https://downgit.github.io/#/home?url=https://github.com/Airtz/karat/tree/main/bin) karat binaries from the `bin` directory
+1. [Download](https://downgit.github.io/#/home?url=https://github.com/Airtz/karat/tree/main/bin) `karat` binaries from the `bin` directory
 2. Launch your Dofus client(s)
 3. Load your character(s)
-4. Launch karat.exe
+4. Launch `karat.exe`
 
 ## UI breakdown
 
