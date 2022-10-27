@@ -4,7 +4,7 @@
 
 <p align=center>Windows only.</p>
 
-<p align=center><a href="https://donate.stripe.com/7sI6rK74C7Wk2C46oo"><img src="https://github.com/Airtz/karat/blob/main/res/donate.png" width=110 height=132/></a></p>
+<p align=center><a href="https://donate.stripe.com/7sI6rK74C7Wk2C46oo"><img src="https://github.com/Airtz/karat/blob/main/res/support.png" width=110 height=132/></a></p>
 
 ## Getting started
 
