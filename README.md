@@ -13,39 +13,61 @@
 3. Load your character(s)
 4. Launch `karat.exe`
 
-## UI breakdown
+## In-game commands
 
-<p align=center><img src="https://github.com/Airtz/karat/blob/main/res/collapsed_ui.png"/></p>
+<p align=center><img src="https://github.com/Airtz/karat/blob/main/res/chat.png"/></p>
 
-1. Load a classifier
-2. Save the current classifier
-3. Probability threshold above which messages are classified as spams
-4. Mode
-    * `Log`: log messages for manual training
-    * `Filter`: log messages for manual training and filter spams
-    * `Filter + Training`: log messages for manual training, filter spams and automatic training
-6. Expand or collapse the UI
+Input must be prefixed with `$`. Availables commands are:
 
-<p align=center><img src="https://github.com/Airtz/karat/blob/main/res/expanded_ui.png"/></p>
+* `help` - show this message
+* `load` &lt;path&gt; - load a classifier from the specified path
+* `mode` &lt;log|filter|learn&gt; - set the operating mode
+* `save` &lt;path&gt; - save the current classifier to the specified path
+* `threshold` &lt;value&gt; - set the current classifier threshold
+* `train` - open the training UI
 
-1. Spam list
-    * `Channel`: channel in which the message was sent
-    * `Sender`: name of the sender
-    * `p`: probability of the message being a spam according to the classifier
-3. Ham (non-spam) list
-4. Train the classifier to classify listed spams and hams as such and then retrieve the current log
-5. Move selected ham to the spam list (you can also double click on the item)
-6. Move selected spam to the ham list (you can also double click on the item)
+## Operating modes
+
+* `log`
+   * log incoming messages for manual classification
+* `filter` (default)
+   * log incoming messages for manual classification
+   * filter incoming messages using the current classifier
+* `learn`
+   * log incoming messages for manual classification
+   * filter incoming messages using the current classifier
+   * automatically train the current classifier
+
+Switching to `learn` mode is not recommended with low accuracy classifiers.
+
+## Threshold
+
+Filtering is done using a Multinomial Naive Bayes Classifier with the following decision rule:
+
+<p align=center><img src="https://github.com/Airtz/karat/blob/main/res/decision.png"/></p>
+
+With `p` the estimated probability of message `m` to be a spam, `t` the classifier threshold and `S` the spam set.
+
+Default value for `t` is 0.8.
 
 ## Training the classifier
 
 If the accuracy of the provided classifier is not good enough, you can train your own.
 
-Expand the UI and manually classify messages as spams or hams using move buttons then hit the train and sync button. Repeat until the accuracy is good enough.
+Open the training UI using the `train` command and manually classify messages as spams or hams using move buttons then hit the train and retrieve button. Repeat until the accuracy is good enough.
 
-For obvious reasons it is not recommended to use the `Filter + Train` mode with low accuracy classifiers.
+<p align=center><img src="https://github.com/Airtz/karat/blob/main/res/ui.png"/></p>
+
+1. Spam list
+    * `Channel`: channel in which the message was sent
+    * `Sender`: name of the sender
+    * `p`: estimated probability of the message to be a spam
+3. Ham (non-spam) list
+4. Train the classifier to classify listed spams and hams as such and then retrieve the current log
+5. Move selected ham to the spam list (you can also double click on the item)
+6. Move selected spam to the ham list (you can also double click on the item)
 
 ## Implementation details
 
-* Will automatically load the default classifier `classifier.bin` on startup if available
+* Will automatically load the default classifier from `classifier.bin` on startup if available
 * Will automatically save the current classifier to `classifier.bin` on exit
