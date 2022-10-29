@@ -17,7 +17,7 @@
 
 <p align=center><img src="https://github.com/Airtz/karat/blob/main/res/chat.png"/></p>
 
-Input must be prefixed with `$`. Availables commands are:
+Input must be prefixed with `$`. Make sure to enable your `informations` channel. Availables commands are:
 
 * `help` - show this message
 * `load` &lt;path&gt; - load a classifier from the specified path
