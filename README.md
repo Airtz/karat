@@ -46,7 +46,7 @@ Filtering is done using a Multinomial Naive Bayes Classifier with the following 
 
 <p align=center><img src="https://github.com/Airtz/karat/blob/main/res/decision.png"/></p>
 
-With `p` the estimated probability of message `m` to be a spam, `t` the classifier threshold and `S` the spam set.
+With `p` the estimated probability of message `m` being a spam, `t` the classifier threshold and `S` the spam set.
 
 Default value for `t` is 0.8.
 
@@ -61,7 +61,7 @@ Open the training UI using the `train` command and manually classify messages as
 1. Spam list
     * `Channel`: channel in which the message was sent
     * `Sender`: name of the sender
-    * `p`: estimated probability of the message to be a spam
+    * `p`: estimated probability of the message being a spam
 3. Ham (non-spam) list
 4. Train the classifier to classify listed spams and hams as such and then retrieve the current log
 5. Move selected ham to the spam list (you can also double click on the item)
