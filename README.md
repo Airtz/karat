@@ -20,11 +20,11 @@
 Input must be prefixed with `$`. Make sure to enable your `informations` channel. Availables commands are:
 
 * `help` - show this message
-* `load` &lt;path&gt; - load a classifier from the specified path
+* `load` [path] - load a classifier from the default path or a specified one
+* `save` [path] - save the current classifier to the default path or a specified one
 * `mode` &lt;log|filter|learn&gt; - set the operating mode
-* `save` &lt;path&gt; - save the current classifier to the specified path
-* `threshold` &lt;value&gt; - set the current classifier threshold
 * `train` - open the training UI
+* `amplitude` &lt;value&gt; - set the current classifier amplitude
 
 ## Operating modes
 
@@ -40,15 +40,11 @@ Input must be prefixed with `$`. Make sure to enable your `informations` channel
 
 Switching to `learn` mode is not recommended with low accuracy classifiers.
 
-## Threshold
+## Amplitude
 
-Filtering is done using a Multinomial Naive Bayes Classifier with the following decision rule:
+Filtering is done using a Multinomial Naive Bayes Classifier. Likelihood ratios are clamped between amplitude `a` and `1/a`.
 
-<p align=center><img src="https://github.com/Airtz/karat/blob/main/res/decision.png"/></p>
-
-With `p` the estimated probability of message `m` being a spam, `t` the classifier threshold and `S` the spam set.
-
-Default value for `t` is 0.8.
+Default value for `a` is 100.
 
 ## Training the classifier
 
