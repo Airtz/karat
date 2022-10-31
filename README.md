@@ -15,7 +15,7 @@
 
 ## In-game commands
 
-<p align=center><img src="https://github.com/Airtz/karat/blob/main/res/chat.png"/></p>
+<p align=center><img src="https://github.com/Airtz/karat/blob/main/res/help.png"/></p>
 
 Input must be prefixed with `$`. Make sure to enable your `informations` channel. Availables commands are:
 
