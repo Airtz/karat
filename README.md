@@ -17,12 +17,13 @@
 
 <p align=center><img src="https://github.com/Airtz/karat/blob/main/res/help.png"/></p>
 
-Input must be prefixed with `$`. Make sure to enable your `informations` channel. Availables commands are:
+Input must be prefixed with `$`. Make sure to enable your `info` channel. Availables commands are:
 
 * `help` - show this message
 * `load` [path] - load a classifier from the default path or a specified one
 * `save` [path] - save the current classifier to the default path or a specified one
 * `mode` &lt;log|filter|learn&gt; - set the operating mode
+* `channel` &lt;name&gt; - enable or disable filtering of the specified channel
 * `train` - open the training UI
 * `amplitude` &lt;value&gt; - set the current classifier amplitude
 
@@ -39,6 +40,12 @@ Input must be prefixed with `$`. Make sure to enable your `informations` channel
    * automatically train the current classifier
 
 Switching to `learn` mode is not recommended with low accuracy classifiers.
+
+## Channels
+
+Only 4 channels are filtered by default: `global`, `private`, `sales` and `seek`. You can manage channels using the `channel` command. This will be saved to the config file.
+
+Available channels are: `global`, `team`, `guild`, `alliance`, `party`, `sales`, `seek`, `private`, `arena` and `community`.
 
 ## Amplitude
 
