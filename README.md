@@ -72,5 +72,7 @@ Open the training UI using the `train` command and manually classify messages as
 
 ## Implementation details
 
+* Will automatically load preferences from `config.cfg` on startup if available
 * Will automatically load the default classifier from `classifier.bin` on startup if available
+* Will automatically save preferences to `config.cfg` on exit
 * Will automatically save the current classifier to `classifier.bin` on exit
